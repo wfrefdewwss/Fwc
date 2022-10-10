@@ -1,0 +1,131 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local Frame_4 = Instance.new("Frame")
+local Frame_5 = Instance.new("Frame")
+local Frame_6 = Instance.new("Frame")
+local Full = Instance.new("TextButton")
+local Scary = Instance.new("TextButton")
+local Frame_7 = Instance.new("Frame")
+local Frame_8 = Instance.new("Frame")
+local Frame_9 = Instance.new("Frame")
+local Normal = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.Position = UDim2.new(0.456801534, 0, 0.334448159, 0)
+Frame.Size = UDim2.new(0, 434, 0, 271)
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(83, 83, 83)
+TextLabel.Position = UDim2.new(0.039274998, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 399, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "night vision modes"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 42.000
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_2.Size = UDim2.new(0, 13, 0, 271)
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_3.Position = UDim2.new(0.960725069, 0, 0, 0)
+Frame_3.Size = UDim2.new(0, 13, 0, 271)
+
+Frame_4.Parent = Frame
+Frame_4.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_4.Position = UDim2.new(0.887578249, 0, 0.278169185, 0)
+Frame_4.Size = UDim2.new(0, 13, 0, 64)
+
+Frame_5.Parent = Frame
+Frame_5.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_5.Position = UDim2.new(0.666038811, 0, 0.661933005, 0)
+Frame_5.Size = UDim2.new(0, 13, 0, 64)
+
+Frame_6.Parent = Frame
+Frame_6.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_6.Position = UDim2.new(0.295571029, 0, 0.661933005, 0)
+Frame_6.Size = UDim2.new(0, 13, 0, 63)
+
+Full.Name = "Full"
+Full.Parent = Frame
+Full.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Full.Position = UDim2.new(0.54527235, 0, 0.278169185, 0)
+Full.Size = UDim2.new(0, 147, 0, 64)
+Full.Font = Enum.Font.SourceSans
+Full.Text = "Full night vision"
+Full.TextColor3 = Color3.fromRGB(0, 0, 0)
+Full.TextSize = 18.000
+Full.MouseButton1Down:connect(function()
+	game.Lighting.OutdoorAmbient = Color3.new(1,1,1)
+	game.Lighting.Ambient = Color3.new(1,1,1)
+	game.Lighting.OutdoorAmbient = Color3.new(1,0,0)
+	game.Lighting.TimeOfDay = "12:00:00"
+	game.Lighting.FogColor = Color3.new(0,0,0)
+	game.Lighting.FogEnd = 1000
+	print("Loaded!")
+end)
+
+Scary.Name = "Scary"
+Scary.Parent = Frame
+Scary.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scary.Position = UDim2.new(0.326378345, 0, 0.661933005, 0)
+Scary.Size = UDim2.new(0, 148, 0, 64)
+Scary.Font = Enum.Font.SourceSans
+Scary.Text = "Scary night vision"
+Scary.TextColor3 = Color3.fromRGB(0, 0, 0)
+Scary.TextSize = 19.000
+Scary.MouseButton1Down:connect(function()
+	game.Lighting.OutdoorAmbient = Color3.new(1,1,1)
+	game.Lighting.Ambient = Color3.new(1,1,1)
+	game.Lighting.OutdoorAmbient = Color3.new(1,0,0)
+	game.Lighting.TimeOfDay = "12:00:00"
+	game.Lighting.FogColor = Color3.new(0,0,0)
+	game.Lighting.FogEnd = 30
+	print("Loaded!")
+end)
+
+Frame_7.Parent = Frame
+Frame_7.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_7.Position = UDim2.new(0.0905019417, 0, 0.278169185, 0)
+Frame_7.Size = UDim2.new(0, 16, 0, 64)
+
+Frame_8.Parent = Frame
+Frame_8.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_8.Position = UDim2.new(0.512160897, 0, 0.278169185, 0)
+Frame_8.Size = UDim2.new(0, 14, 0, 64)
+
+Frame_9.Parent = Frame
+Frame_9.BackgroundColor3 = Color3.fromRGB(166, 251, 255)
+Frame_9.Position = UDim2.new(0.46146965, 0, 0.278169185, 0)
+Frame_9.Size = UDim2.new(0, 10, 0, 64)
+
+Normal.Name = "Normal"
+Normal.Parent = Frame
+Normal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Normal.Position = UDim2.new(0.128221661, 0, 0.278169185, 0)
+Normal.Size = UDim2.new(0, 147, 0, 64)
+Normal.Font = Enum.Font.SourceSans
+Normal.Text = "Normal night vision"
+Normal.TextColor3 = Color3.fromRGB(0, 0, 0)
+Normal.TextSize = 18.000
+Normal.MouseButton1Down:connect(function()
+	game.Lighting.OutdoorAmbient = Color3.new(1,1,1)
+	game.Lighting.Ambient = Color3.new(1,1,1)
+	game.Lighting.OutdoorAmbient = Color3.new(1,0,0)
+	game.Lighting.TimeOfDay = "12:00:00"
+	game.Lighting.FogColor = Color3.new(0,0,0)
+	game.Lighting.FogEnd = 600
+	print("Loaded!")
+end)
